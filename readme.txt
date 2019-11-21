@@ -54,6 +54,7 @@ Você pode esclarecer suas dúvidas usando:
 = Requerimentos: =
 
 - [SimpleXML](http://php.net/manual/pt_BR/book.simplexml.php) ativado no PHP (note que já é ativado por padrão no PHP 5).
+- Modulo [SOAP](http://php.net/manual/pt_BR/book.soap.php) (utilizado para comunicação com o webservice de cálculo de frete).
 
 = Configurações do plugin: =
 
@@ -74,6 +75,7 @@ Este plugin esta licenciado como GPL.
 
 * WooCommerce 3.8 ou posterior.
 * [SimpleXML](http://php.net/manual/pt_BR/book.simplexml.php) ativado no PHP (note que já é ativado por padrão no PHP 5).
+- Modulo [SOAP](http://php.net/manual/pt_BR/book.soap.php) (utilizado para comunicação com o webservice de cálculo de frete).
 * Adicionar peso e dimensões nos produtos que pretende entregar.
 
 = Quais são os métodos de entrega que o plugin aceita? =
