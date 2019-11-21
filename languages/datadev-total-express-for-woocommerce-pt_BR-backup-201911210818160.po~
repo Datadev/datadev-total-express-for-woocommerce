@@ -1,0 +1,281 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Datadev - Total Express for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 10:03+0000\n"
+"PO-Revision-Date: 2019-11-21 10:18+0000\n"
+"Last-Translator: Fabrício Costa da Silva <skydogtk@gmail.com>\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3"
+
+#. 1: shipping method name 2: days to delivery
+#: includes/class-datadev-total-express-orders.php:40
+#, php-format
+msgid "%1$s (delivery within %2$d working day after paid)"
+msgid_plural "%1$s (delivery within %2$d working days after paid)"
+msgstr[0] "%1$s (entrega em %2$d dia útil após o pagamento)"
+msgstr[1] "%1$s (entrega em %2$d dias úteis após o pagamento)"
+
+#: includes/admin/views/html-admin-missing-dependencies.php:23
+msgid "Active WooCommerce"
+msgstr "Ativar WooCommerce"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:149
+msgid "Additional Days"
+msgstr "Dias adicionais"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:151
+msgid "Additional working days to the estimated delivery."
+msgstr "Dias úteis adicionais para a estimativa de entrega."
+
+#. Description of the plugin
+msgid "Adds Total Express shipping methods to your WooCommerce store."
+msgstr ""
+"Adiciona os métodos de entrega da Total Express para a sua loja WooCommerce"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:97
+msgid "Any Shipping Class"
+msgstr "Qualquer classe de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:127
+msgid "Behavior Options"
+msgstr "Opções de comportamento"
+
+#. Author of the plugin
+msgid "Datadev"
+msgstr "Datadev"
+
+#. Name of the plugin
+#: includes/admin/views/html-admin-help-message.php:17
+#: includes/admin/views/html-admin-missing-dependencies.php:20
+msgid "Datadev - Total Express for WooCommerce"
+msgstr "Datadev - Total Express para WooCommerce"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:247
+msgid "Debug Log"
+msgstr "Log de depuração"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:171
+msgid "Declare Value for Insurance"
+msgstr "Valor declarado para seguro"
+
+#: includes/class-datadev-total-express-orders.php:57
+msgid "Delivery forecast"
+msgstr "Previsão de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:141
+msgid "Delivery Time"
+msgstr "Tempo de entrega"
+
+#: includes/admin/views/html-admin-missing-dependencies.php:20
+msgid "depends on the last version of WooCommerce to work!"
+msgstr "depende da última versão do WooCommerce para funcionar!"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:144
+msgid "Display the estimated delivery time in working days."
+msgstr "Mostra a estimativa de tempo de entrega em dias úteis."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:173
+msgid "Enable declared value"
+msgstr "Habilita o valor declarado"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:249
+msgid "Enable logging"
+msgstr "Habilita o registro de log"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:116
+msgid "Enable this shipping method"
+msgstr "Habilita este método de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:114
+msgid "Enable/Disable"
+msgstr "Habilitar/desabilitar"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:159
+msgid ""
+"Enter an amount, e.g. 2.50, or a percentage, e.g. 5%. Leave blank to disable."
+msgstr ""
+"Informe um valor, por exemplo 2.50, ou um percentual, por exemplo 5%. Deixe "
+"em branco para desabilitar."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:235
+msgid "Extra Weight (kg)"
+msgstr "Peso extra (kg)"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:237
+msgid ""
+"Extra weight in kilograms to add to the package total when quoting shipping "
+"costs."
+msgstr ""
+"Peso extra em quilogramas para adicionar ao total da encomenda ao cotar o "
+"custo de envio."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:157
+msgid "Handling Fee"
+msgstr "Taxa de manuseio"
+
+#. %s: plugin name
+#: includes/admin/views/html-admin-help-message.php:17
+#, php-format
+msgid ""
+"Help us keep the %s plugin updated and improved by rating five stars &#9733;"
+"&#9733;&#9733;&#9733;&#9733; on WordPress.org. Thank you in advance!"
+msgstr ""
+"Nos ajude a manter o plugin %s atualizado e melhorado avaliando com cinco "
+"estrelas &#9733;&#9733;&#9733;&#9733;&#9733; no WordPress.org. Muito "
+"obrigado!"
+
+#. URI of the plugin
+msgid "https://github.com/datadev/datadev-total-express-for-woocommerce"
+msgstr "https://github.com/datadev/datadev-total-express-for-woocommerce"
+
+#. Author URI of the plugin
+msgid "https://www.datadev.com.br"
+msgstr "https://www.datadev.com.br"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:134
+msgid "If necessary, select a shipping class to apply this method."
+msgstr ""
+"Se necessário, selecione uma casse de entrega para aplicar neste método."
+
+#: includes/admin/views/html-admin-missing-dependencies.php:32
+msgid "Install WooCommerce"
+msgstr "Instalar WooCommerce"
+
+#. %s: method title
+#: includes/abstracts/class-datadev-total-express-shipping.php:252
+#, php-format
+msgid "Log %s events, such as WebServices requests."
+msgstr "Registra eventos do %s, como as requisições de WebServices."
+
+#: includes/admin/views/html-admin-help-message.php:20
+msgid "Make a review"
+msgstr "Fazer uma revisão"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:214
+msgid "Minimum Height (cm)"
+msgstr "Altura mínima (cm)"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:216
+msgid "Minimum height of your shipping packages."
+msgstr "Altura mínima dos seus pacotes de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:228
+msgid "Minimum Length (cm)"
+msgstr "Comprimento mínimo (cm)"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:230
+msgid "Minimum length of your shipping packages."
+msgstr "Comprimento mínimo dos seus pacotes de entrega."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:210
+msgid "Minimum measure for your shipping packages."
+msgstr "Medidas mínimas dos seus pacotes de entrega."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:221
+msgid "Minimum Width (cm)"
+msgstr "Largura mínima (cm)"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:223
+msgid "Minimum width of your shipping packages."
+msgstr "Largura mínima dos seus pacotes de entrega."
+
+#. %s: method title
+#: includes/admin/views/html-admin-shipping-method-settings.php:20
+#, php-format
+msgid "More about %s."
+msgstr "Mais sobre %s."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:98
+msgid "No Shipping Class"
+msgstr "Nenhuma classe de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:165
+msgid "Optional Services"
+msgstr "Serviços opcionais"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:208
+msgid "Package Standard"
+msgstr "Pacote padrão"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:200
+msgid "Password"
+msgstr "Senha"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:202
+msgid "Password."
+msgstr "Senha."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:184
+msgid "Service Code"
+msgstr "Código de serviço"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:186
+msgid "Service code, use this for custom codes."
+msgstr "Código de serviço, use isto para códigos personalizados"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:179
+msgid "Service Options"
+msgstr "Opções de serviço"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:132
+msgid "Shipping Class"
+msgstr "Classe de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:143
+msgid "Show estimated delivery time"
+msgstr "Mostrar a estimativa de tempo de entrega"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:242
+msgid "Testing"
+msgstr "Testando"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:174
+msgid ""
+"This controls if the price of the package must be declared for insurance "
+"purposes."
+msgstr ""
+"Controla se o preço da encomenda deve ser declarado para propósitos de "
+"seguro."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:122
+msgid "This controls the title which the user sees during checkout."
+msgstr "Controla o título que o usuário verá no checkout."
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:120
+msgid "Title"
+msgstr "Título"
+
+#: includes/integrations/class-datadev-total-express-integration.php:23
+msgid "Total Express"
+msgstr "Total Express"
+
+#: includes/shipping/class-datadev-total-express-shipping-express.php:33
+msgid "Total Express Express"
+msgstr "Total Express Expresso"
+
+#: includes/shipping/class-datadev-total-express-shipping-standard.php:33
+msgid "Total Express Standard"
+msgstr "Total Express Padrão"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:167
+msgid ""
+"Use these options to add the value of each service provided by Total Express."
+msgstr ""
+"Use estas opções para adicionar o valor de cada serviço provido pela Total "
+"Express"
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:192
+#: includes/abstracts/class-datadev-total-express-shipping.php:194
+msgid "User"
+msgstr ""
+
+#: includes/abstracts/class-datadev-total-express-shipping.php:86
+msgid "View logs."
+msgstr ""
