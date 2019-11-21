@@ -441,7 +441,7 @@ class Datadev_Total_Express_Webservice {
                 if ('yes' === $this->debug) {
                     $this->log->add($this->id, 'WP_Error: ' . $wsdl_response->get_error_message());
                 }
-            } else {//if ($wsdl_response['response']['code'] >= 200 && $wsdl_response['response']['code'] < 300) {
+            } else {
                 $wsdl_body = wp_remote_retrieve_body($wsdl_response);
                 $wsdl = 'data://text/plain;base64,' . base64_encode($wsdl_body);
 
