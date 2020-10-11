@@ -437,21 +437,21 @@ class Datadev_Total_Express_Webservice {
                 ),
             );
             
-            $response = wp_safe_remote_get(esc_url_raw($url), $args);
-            if (is_wp_error($response)){
+            $responseWSDL = wp_safe_remote_get(esc_url_raw($url), $args);
+            if (is_wp_error($responseWSDL)){
                 if ('yes' === $this->debug) {
-                    $this->log->add($this->id, 'WP_Error: ' . $response->get_error_message());
+                    $this->log->add($this->id, 'WP_Error: ' . $responseWSDL->get_error_message());
                 }
-                return;
+                return $shipping;
                 
             }
                            
-            $body = wp_remote_retrieve_body($response);
+            $body = wp_remote_retrieve_body($responseWSDL);
             if (!$this->validateWSDLResponse($body)) {
                 if ('yes' === $this->debug) {
                     $this->log->add($this->id, 'Total Express server response: ' . $body);
                 }
-                return;
+                return $shipping;
             }
             
             $wsdl = 'data://text/plain;base64,' . base64_encode($body);
@@ -467,17 +467,17 @@ class Datadev_Total_Express_Webservice {
             );
             $soap = new SoapClient($wsdl, $options);
 
-            $response = $soap->calcularFrete($params);
-            if ($response->CodigoProc == 1) {
+            $responseCalculo = $soap->calcularFrete($params);
+            if ($responseCalculo->CodigoProc == 1) {
                 if ('yes' === $this->debug) {
-                    $this->log->add($this->id, 'Response: ' . print_r($response, true));
+                    $this->log->add($this->id, 'Response: ' . print_r($responseCalculo, true));
                 }
 
-                if (isset($response->DadosFrete)) {
-                    $shipping = $response->DadosFrete;
+                if (isset($responseCalculo->DadosFrete)) {
+                    $shipping = $responseCalculo->DadosFrete;
                 }
             } else {
-                $this->log->add($this->id, 'Response CodigoProc: ' . $response->CodigoProc);
+                $this->log->add($this->id, 'Response CodigoProc: ' . $responseCalculo->CodigoProc);
             }
         } catch (Exception $ex) {
             $this->log->add($this->id, 'Fail: ' . $ex->getMessage());
@@ -487,7 +487,7 @@ class Datadev_Total_Express_Webservice {
     }
     
     private function validateWSDLResponse($response) {
-        return strpos($response, 'http') === 0;
+        return strpos($response, '<') === 0;
     }
 
 }
