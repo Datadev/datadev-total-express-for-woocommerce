@@ -436,44 +436,58 @@ class Datadev_Total_Express_Webservice {
                     'Authorization' => $auth,
                 ),
             );
-            $wsdl_response = wp_safe_remote_get(esc_url_raw($url), $args);
-            if (is_wp_error($wsdl_response)) {
+            
+            $response = wp_safe_remote_get(esc_url_raw($url), $args);
+            if (is_wp_error($response)){
                 if ('yes' === $this->debug) {
-                    $this->log->add($this->id, 'WP_Error: ' . $wsdl_response->get_error_message());
+                    $this->log->add($this->id, 'WP_Error: ' . $response->get_error_message());
+                }
+                return;
+                
+            }
+                           
+            $body = wp_remote_retrieve_body($response);
+            if (!$this->validateWSDLResponse($body)) {
+                if ('yes' === $this->debug) {
+                    $this->log->add($this->id, 'Total Express server response: ' . $body);
+                }
+                return;
+            }
+            
+            $wsdl = 'data://text/plain;base64,' . base64_encode($body);
+
+            $options = array(
+                'stream_context' => stream_context_create(
+                        array(
+                            'http' => array(
+                                'header' => 'Authorization: ' . $auth,
+                            )
+                        )
+                )
+            );
+            $soap = new SoapClient($wsdl, $options);
+
+            $response = $soap->calcularFrete($params);
+            if ($response->CodigoProc == 1) {
+                if ('yes' === $this->debug) {
+                    $this->log->add($this->id, 'Response: ' . print_r($response, true));
+                }
+
+                if (isset($response->DadosFrete)) {
+                    $shipping = $response->DadosFrete;
                 }
             } else {
-                $wsdl_body = wp_remote_retrieve_body($wsdl_response);
-                $wsdl = 'data://text/plain;base64,' . base64_encode($wsdl_body);
-
-                $options = array(
-                    'stream_context' => stream_context_create(
-                            array(
-                                'http' => array(
-                                    'header' => 'Authorization: ' . $auth,
-                                )
-                            )
-                    )
-                );
-                $soap = new SoapClient($wsdl, $options);
-
-                $response = $soap->calcularFrete($params);
-                if ($response->CodigoProc == 1) {
-                    if ('yes' === $this->debug) {
-                        $this->log->add($this->id, 'Response: ' . print_r($response, true));
-                    }
-
-                    if (isset($response->DadosFrete)) {
-                        $shipping = $response->DadosFrete;
-                    }
-                } else {
-                    $this->log->add($this->id, 'Response CodigoProc: ' . $response->CodigoProc);
-                }
+                $this->log->add($this->id, 'Response CodigoProc: ' . $response->CodigoProc);
             }
         } catch (Exception $ex) {
             $this->log->add($this->id, 'Fail: ' . $ex->getMessage());
         }
 
         return $shipping;
+    }
+    
+    private function validateWSDLResponse($response) {
+        return strpos($response, 'http') === 0;
     }
 
 }

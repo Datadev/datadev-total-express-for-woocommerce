@@ -5,12 +5,12 @@ Plugin URI:           https://github.com/datadev/datadev-total-express-for-wooco
 Description:          Adds Total Express shipping methods to your WooCommerce store.
 Author:               Datadev
 Author URI:           https://www.datadev.com.br
-Version:              1.0.0
+Version:              1.1.0
 License:              GPLv2 or later
 Text Domain:          datadev-total-express-for-woocommerce
 Domain Path:          /languages
 WC requires at least: 3.8.0
-WC tested up to:      3.8.0
+WC tested up to:      4.5.2
 
 Datadev - Total Express for WooCommerce is free software: you can
 redistribute it and/or modify it under the terms of the

@@ -1,9 +1,9 @@
 === Datadev - Total Express for WooCommerce ===
-Contributors: skydogtk
+Contributors: datadev, skydogtk
 Tags: shipping, delivery, woocommerce, total express
 Requires at least: 5.2
-Tested up to: 5.2
-Stable tag: 1.0.0
+Tested up to: 5.5.1
+Stable tag: 1.1.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -155,6 +155,10 @@ Em caso de dúvidas, basta abrir um tópico no [fórum de suporte do plugin](htt
 
 == Changelog ==
 
+= 1.1.0 - 2010/10/11 =
+
+- Melhoria no registro de log quando as credenciais estão erradas.
+
 = 1.0.0 - 2019/11/12 =
 
 - Lançamento da versão inicial do plugin
@@ -162,6 +166,10 @@ Em caso de dúvidas, basta abrir um tópico no [fórum de suporte do plugin](htt
 [See changelog for all versions](https://raw.githubusercontent.com/datadev/datadev-total-express-for-woocommerce/master/CHANGELOG.txt).
 
 == Upgrade Notice ==
+
+= 1.1.0 - 2010/10/11 =
+
+- Melhoria no registro de log quando as credenciais estão erradas.
 
 = 1.0.0 =
 
