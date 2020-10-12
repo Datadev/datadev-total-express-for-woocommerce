@@ -468,16 +468,13 @@ class Datadev_Total_Express_Webservice {
             $soap = new SoapClient($wsdl, $options);
 
             $responseCalculo = $soap->calcularFrete($params);
+            if ('yes' === $this->debug) {
+                $this->log->add($this->id, 'Response: ' . print_r($responseCalculo, true));
+            }
             if ($responseCalculo->CodigoProc == 1) {
-                if ('yes' === $this->debug) {
-                    $this->log->add($this->id, 'Response: ' . print_r($responseCalculo, true));
-                }
-
                 if (isset($responseCalculo->DadosFrete)) {
                     $shipping = $responseCalculo->DadosFrete;
                 }
-            } else {
-                $this->log->add($this->id, 'Response CodigoProc: ' . $responseCalculo->CodigoProc);
             }
         } catch (Exception $ex) {
             $this->log->add($this->id, 'Fail: ' . $ex->getMessage());
